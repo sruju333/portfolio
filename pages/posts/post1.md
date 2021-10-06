@@ -1,7 +1,7 @@
 ---
 title: What's in this?
 date: 10/07/2021
-description: "What's going be there in this portfolio", you ask?
+description: What's going be there in this portfolio you ask?
 tag: casual, life, work, gaming
 author: Me
 ---
