@@ -12,7 +12,6 @@ The portfolio is going to have all sorts of things!
 
 I'll post some good photos, write some good content, talk about my favourite things, my interests or even my work! It'll be mature and simple. And so, in that way, the blog will seem - elegant.
 
-Here is a quote from a childhood favourite anime show:
 > There's no such thing as coincidence in this world. What exists is only the inevitable. – Yuko Ichihara
 
 
