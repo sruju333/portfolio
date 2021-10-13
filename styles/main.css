@@ -24,31 +24,6 @@ body {
   font-variation-settings: 'wght' 450;
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
-
-  --s: 25vmin;
-  --p: calc(var(--s) / 2);
-  --c1: pink;
-  --c2: dodgerblue;
-  --c3: white;
-  --bg: var(--c3);
-  --d: 4000ms;
-  --e: cubic-bezier(0.76, 0, 0.24, 1);
-  
-  background-color: var(--bg);
-  background-image:
-    linear-gradient(45deg, var(--c1) 25%, transparent 25%),
-    linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--c2) 75%),
-    linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
-  background-size: var(--s) var(--s);
-  background-position: 
-    calc(var(--p) *  1) calc(var(--p) *  0), 
-    calc(var(--p) * -1) calc(var(--p) *  1), 
-    calc(var(--p) *  1) calc(var(--p) * -1), 
-    calc(var(--p) * -1) calc(var(--p) *  0);
-  animation: 
-    color var(--d) var(--e) infinite,
-    position var(--d) var(--e) infinite;
 }
 b,
 strong,
@@ -104,46 +79,62 @@ img.next-image {
   }
 }
 
-@keyframes position {
-  0% {
-    background-position: 
-      calc(var(--p) *  1) calc(var(--p) *  0), 
-      calc(var(--p) * -1) calc(var(--p) *  1), 
-      calc(var(--p) *  1) calc(var(--p) * -1), 
-      calc(var(--p) * -1) calc(var(--p) *  0);
-  }
-  25% {
-    background-position: 
-      calc(var(--p) *  1) calc(var(--p) *  4), 
-      calc(var(--p) * -1) calc(var(--p) *  5), 
-      calc(var(--p) *  1) calc(var(--p) *  3), 
-      calc(var(--p) * -1) calc(var(--p) *  4);
-  }
-  50% {
-    background-position: 
-      calc(var(--p) *  3) calc(var(--p) * 8), 
-      calc(var(--p) * -3) calc(var(--p) * 9), 
-      calc(var(--p) *  2) calc(var(--p) * 7), 
-      calc(var(--p) * -2) calc(var(--p) * 8);
-  }
-  75% {
-    background-position: 
-      calc(var(--p) *  3) calc(var(--p) * 12), 
-      calc(var(--p) * -3) calc(var(--p) * 13), 
-      calc(var(--p) *  2) calc(var(--p) * 11), 
-      calc(var(--p) * -2) calc(var(--p) * 12);
-  }
-  100% {    
-    background-position: 
-      calc(var(--p) *  5) calc(var(--p) * 16), 
-      calc(var(--p) * -5) calc(var(--p) * 17), 
-      calc(var(--p) *  5) calc(var(--p) * 15), 
-      calc(var(--p) * -5) calc(var(--p) * 16);
-  }
+#home {
+  clip-path: url(#cache);
 }
 
-@media (prefers-reduced-motion) {
-  body {
-    animation: none;
-  }
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #CE1B5F;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; 
 }
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 6;
+  stroke-miterlimit:10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;    
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+ }
+    }
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+ }
+  50% {
+    opacity: 0.2;
+ }
+  100% {
+    opacity: 0.15;
+ }
+    }
