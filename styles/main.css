@@ -64,21 +64,6 @@ img.next-image {
   color: #69778c;
 }
 
-@keyframes color {
-  0%, 25% {
-    --bg: var(--c3);
-  }
-  26%, 50% {
-    --bg: var(--c1);
-  }
-  51%, 75% {
-    --bg: var(--c3);
-  }
-  76%, 100% {
-    --bg: var(--c2);
-  }
-}
-
 #home {
   clip-path: url(#cache);
 }
