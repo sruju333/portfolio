@@ -67,7 +67,6 @@ img.next-image {
 
 body{
   background-color: #c9c9cf;
-  opacity: 0.6;
   background-image: radial-gradient(#ad4c76 1.3px, #c9c9cf 1.3px);
   background-size: 26px 26px; 
 }
