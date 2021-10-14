@@ -25,11 +25,6 @@ body {
   font-variation-settings: 'wght' 450;
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
-
-  background-color: #c9c9cf;
-  opacity: 0.6;
-  background-image: radial-gradient(#ad4c76 1.3px, #c9c9cf 1.3px);
-  background-size: 26px 26px; 
 }
 b,
 strong,
@@ -70,3 +65,9 @@ img.next-image {
   color: #69778c;
 }
 
+body{
+  background-color: #c9c9cf;
+  opacity: 0.6;
+  background-image: radial-gradient(#ad4c76 1.3px, #c9c9cf 1.3px);
+  background-size: 26px 26px; 
+}
